@@ -12,6 +12,10 @@
     "name": "X-song",
     "email": "285134765@qq.com"
   },
+  "keywords": [
+    "x-cli",
+    "脚手架"
+  ],
   "dependencies": {
     "@types/eslint": "^7.28.0",
     "@types/fs-extra": "^9.0.12",
