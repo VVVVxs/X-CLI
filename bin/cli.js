@@ -2,6 +2,7 @@
 import program from 'commander';
 import ora from 'ora';
 import figlet from 'figlet';
+import chalk from 'chalk';
 import cretae from '../lib/create.js'
 
 const spinner = ora('请耐心等待')
@@ -12,7 +13,12 @@ program
     .option('-f,--force', 'overwrite target directory if it exist')
     .description('create a new project')
     .action(async (name, option) => {
-        await cretae(name, option)
+        try {
+            await cretae(name, option)
+        } catch (err) {
+            console.log(chalk.red(err));
+            return;
+        }
         spinner.start();
         setTimeout(() => {
             spinner.stop();
