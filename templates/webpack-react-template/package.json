@@ -93,7 +93,6 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js --color",
     "build": "webpack --config ./webpack/webpack.prod.js",
     "build:local": "cross-env env=local webpack --config ./webpack/webpack.prod.js",

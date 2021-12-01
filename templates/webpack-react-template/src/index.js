@@ -33,12 +33,13 @@ appIns.use(require('dva-immer').default());
 
 
 appIns.router(({ app }) => {
-    // eslint-disable-next-line react/jsx-filename-extension
-    return (<Suspense fallback={<Loading />}>
+    return (
+        <Suspense fallback={<Loading />}>
             <HashRouter>
                 <App app={app} />
             </HashRouter>
-        </Suspense>);
+        </Suspense>
+    );
 });
 
 // -> Start
