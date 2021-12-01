@@ -1,0 +1,49 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        "@babel/plugin-syntax-dynamic-import", // 懒加载
+        [
+            "@babel/plugin-proposal-decorators", //解析装饰器
+            {
+                "legacy": true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-class-properties", // 解析箭头函数
+            {
+                "loose": true
+            }
+        ],
+        "@babel/plugin-proposal-export-default-from",
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "lib",
+                "style": "css"
+            }
+        ],
+        [
+            "import",
+            {
+                "libraryName": "lodash",
+                "libraryDirectory": "",
+                "camel2DashComponentName": false
+            },
+            "lodash"
+        ],
+        [
+            "import",
+            {
+              "libraryName": "@shark/backstage-ui",
+              "libraryDirectory": "lib",
+              "camel2DashComponentName": false
+            },
+            "@shark/backstage-ui"
+        ],
+        "equire" // 配置echarts按需加载
+    ]
+}

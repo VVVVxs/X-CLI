@@ -6,6 +6,7 @@
     "@ant-design/icons": "^4.3.0",
     "@antv/g6": "^3.8.5",
     "@babel/polyfill": "^7.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
     "animate.css": "^3.5.2",
     "antd": "^4.8.3",
     "array-move": "^3.0.1",
@@ -100,8 +101,5 @@
     "fix:style": "stylelint \"**/*.less\" --fix --syntax less",
     "lint": "eslint --ext .js  --ext .jsx src && npm run lint:style",
     "lint:fix": "eslint --fix --ext .js --ext .jsx src && npm run fix:style"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx}": "eslint"
   }
 }
